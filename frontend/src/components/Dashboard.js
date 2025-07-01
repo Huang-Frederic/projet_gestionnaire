@@ -50,13 +50,19 @@ const Dashboard = () => {
         )}
 
         {loading ? (
-          <div className="loading">Chargement des tâches...</div>
+            <div className="loading">Chargement des tâches...</div>
         ) : (
-          <TaskList 
-            tasks={tasks}
-            onEditTask={handleEditTask}
-          />
+            <>
+              <p>
+                Vous avez <strong>{tasks.length}</strong> tâche{tasks.length !== 1 ? 's' : ''} en cours.
+              </p>
+              <TaskList
+                  tasks={tasks}
+                  onEditTask={handleEditTask}
+              />
+            </>
         )}
+
       </main>
     </div>
   );

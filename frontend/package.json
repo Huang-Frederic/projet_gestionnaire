@@ -17,7 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test:coverage": "react-scripts test --coverage --watchAll=false"
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
+    "lint": "eslint ."
   },
   "eslintConfig": {
     "extends": [
@@ -37,5 +38,12 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:3001",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.27.5",
+    "eslint": "^9.30.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.3.0"
+  }
 }
