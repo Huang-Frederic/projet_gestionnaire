@@ -20,14 +20,16 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Run ESLint on frontend
-        run: |
-          cd frontend
-          npm install
-          npm run lint
       - name: Run ESLint on backend
         run: |
           cd backend
           npm install
           npm run lint
+          
+      - name: Run ESLint on frontend
+        run: |
+          cd frontend
+          npm install
+          npm run lint
+
 
