@@ -19,13 +19,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '18'
 
       - name: Install dependencies
-        run: npm install --force
-
-      - name: Audit and fix dependencies
-        run: npm audit fix
+        run: npm install
 
 
   lint:
@@ -37,16 +34,16 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '18'
 
       - name: Install ESLint and Dependencies
         run: |
           cd frontend
-          npm install eslint@latest --save-dev
+          npm install
           npm run lint
 
       - name: Run ESLint on backend
         run: |
           cd backend
-          npm install eslint@latest --save-dev
+          npm install
           npm run lint
