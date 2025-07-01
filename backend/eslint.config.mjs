@@ -1,7 +1,24 @@
 import globals from "globals";
-import { defineConfig } from "eslint/config";
 
+export default [
+  {
+    languageOptions: {
+      ecmaVersion: 2020,
+      sourceType: "module",
+    },
+  },
 
-export default defineConfig([
-  { files: ["**/*.{js,mjs,cjs}"], languageOptions: { globals: globals.browser } },
-]);
+  {
+    files: ["**/*.js"],
+    languageOptions: {
+      sourceType: "module",
+    },
+  },
+
+  {
+    files: ["**/*.{js,mjs,cjs}"],
+    languageOptions: {
+      globals: globals.browser,
+    },
+  },
+];

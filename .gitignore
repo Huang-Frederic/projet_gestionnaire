@@ -144,4 +144,9 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/node
 
 fred_todo.md
+<<<<<<< HEAD
 .idea/
+=======
+node_modules/
+*/node_modules/
+>>>>>>> pipeline/eslint
