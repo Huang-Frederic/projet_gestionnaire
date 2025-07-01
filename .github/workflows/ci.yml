@@ -55,7 +55,7 @@ jobs:
           npm run lint
 
 
-  lint:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
