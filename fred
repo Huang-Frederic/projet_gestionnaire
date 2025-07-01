@@ -1,18 +1,6 @@
-name: CI/CD Pipeline
-
-on:
-  pull_request:
-    branches:
-      - develop
-  push:
-    branches:
-      - pipeline/eslint
-
-jobs:
-
-
-  lint:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -22,13 +10,22 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install ESLint and Dependencies
+      - name: Testing backend
+        run: |
+          cd backend
+          npm install
+          npm run dev
+
+      - name: Install dependencies
         run: |
           cd frontend
           npm install
-          npm run lint
+          npm start
 
-      - name: Run ESLint on backend
+
+
+
+                - name: Run ESLint on backend
         run: |
           cd backend
           npm install
