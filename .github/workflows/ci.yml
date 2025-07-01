@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - develop
+  push:
+    branches:
+      - pipeline/eslint
 
 jobs:
   build:
@@ -35,11 +38,11 @@ jobs:
       - name: Run ESLint on frontend
         run: |
           cd frontend
-          npm install
+          npm install eslint@latest --save-dev
           npm run lint
 
       - name: Run ESLint on backend
         run: |
           cd backend
-          npm install
+          npm install eslint@latest --save-dev
           npm run lint
