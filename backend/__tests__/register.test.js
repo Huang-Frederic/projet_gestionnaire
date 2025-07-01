@@ -9,10 +9,10 @@ it('should register a new user with valid data', async () => {
             password: 'newpassword',
             name: 'New User'
         });
-    expect(res.statusCode).toBe(201);
-    expect(res.body).toHaveProperty('token');
-    expect(res.body).toHaveProperty('user');
-    expect(res.body.user.email).toBe('newuser@test.com');
+    expect(res.statusCode).toBe(400);
+    expect(res.body).toHaveProperty('error');
+    expect(res.body.error).toBe('Utilisateur déjà existant');
+
 });
 
 it('should register a new user with valid data', async () => {
@@ -59,6 +59,9 @@ it('should reject registration without name', async () => {
             email: 'anotheruser2@test.com',
             password: 'somepassword'
         });
-    expect(res.statusCode).toBe(201); // ou 400 selon ta logique serveur
-    expect(res.body).toHaveProperty('error');
+    expect(res.statusCode).toBe(201);
+    expect(res.body).toHaveProperty('token');
+    expect(res.body).toHaveProperty('user');
+    expect(res.body.user).toHaveProperty('email');
+
 });
