@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# taskmanagement
-Application de gestion de tâches
-=======
 Task Manager – Backend & CI/CD
 
 Présentation
@@ -75,4 +71,25 @@ Pour aller plus loin
 •	Ajouter la validation des champs côté backend
 •	Réinitialiser les données avant chaque test
 •	Mettre à jour les tests selon l’évolution de l’API
->>>>>>> readme
+
+## Fonctionnalités réalisées et branches associées
+
+### Amélioration du CSS Frontend
+
+Description :
+
+Refonte complète des styles :
+Palette de couleurs modernisée
+feature/update-css-styling
+
+### Ajout d’un compteur de tâches
+
+Description :
+
+Affichage dynamique du nombre de tâches :
+
+Vous avez X tâches en cours.
+Affiché dans le composant Dashboard
+
+Branche :
+feature/task-counter
