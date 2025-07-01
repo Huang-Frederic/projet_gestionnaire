@@ -74,3 +74,18 @@ Un test d’intégration réussi prouve que l’enchaînement complet de l’API
 Si le test échoue, cela signale un point d’amélioration dans le parcours utilisateur.
 
 ⸻
+Tests End-to-End (E2E) avec Selenium
+
+Le fichier e2e.test.js permet de réaliser un test E2E automatisé du projet, grâce à Selenium WebDriver.
+Ce test simule l’utilisation réelle de l’application dans un navigateur, en automatisant l’ouverture de pages, les clics, et la navigation comme le ferait un utilisateur.
+
+Scénario couvert dans le test :
+•	Ouverture de l’application dans un navigateur (Chrome)
+•	Simulation d’actions utilisateur (ex : clic sur un bouton de connexion, navigation vers une page protégée)
+•	Vérification que la navigation et l’authentification fonctionnent bien
+
+Ce test permet de valider que le front-end et le back-end communiquent correctement dans un vrai environnement utilisateur.
+
+Pour exécuter le test :
+1.	Démarrer le front-end (npm start dans le dossier frontend)
+2.	Lancer le script e2e : node backend/__tests__/e2e.test.js
