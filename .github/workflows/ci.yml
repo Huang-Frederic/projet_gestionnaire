@@ -24,7 +24,7 @@ jobs:
 
       - name: Install ESLint and Dependencies
         run: |
-          cd frontend
+          cd backend
           npm install
           npm run lint
 
